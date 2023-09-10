@@ -184,16 +184,16 @@ RestartPreviousState
 # If too small, it is hard to select a border. If too large, the borders
 # take up too much space. This default sems acceptable
 # It is overridden by 3D borders
-BorderWidth 8
+BorderWidth 2
 ## This value is used for 3d borders
-ThreeDBorderWidth 8
+#ThreeDBorderWidth 2
 
 ## you can stop some windows having borders, e.g.
 # NoBorder { win1 win2 win3  }
 
 ## Give borders a 3-D appearance. Comment this out if you prefer "flat"
 # borders. (If this is on the BorderWidth value is ignored.)
-UseThreeDBorders
+#UseThreeDBorders
 
 ## Allow individual clients to set border width if they want to
 # If you uncomment this, the initial borderwidth specified when
@@ -206,10 +206,10 @@ UseThreeDBorders
 UseThreeDMenus
 
 # Give title-bars a 3-d appearance
-UseThreeDTitles
+#UseThreeDTitles
 
 # Change depth in title bar to show which window is in focus
-SunkFocusWindowTitle
+#SunkFocusWindowTitle
 
 ##Use  resizing  cursors  when  the  pointer  is  on  the window border
 
@@ -226,7 +226,7 @@ BorderResizeCursors
 
 # For window label on title bar
 # (A proportional font, like helvetica, can save space)
-TitleFont "-*-helvetica-bold-r-*-12-*"
+TitleFont "-*-ariel-r-*-14-*"
 # Other possibilities
 # TitleFont "-*-helvetica-bold-r-*-14-*"
 # TitleFont "-*-helvetica-bold-r-*-17-*"
@@ -240,7 +240,7 @@ MenuFont "-*-helvetica-bold-r-*-14-*"
 # MenuFont  "9x15bold"
 
 # Fonts labelling icons (minimised windows)
-IconFont "-*-helvetica-bold-r-*-12-*"
+IconFont "-*-ariel-r-*-12-*"
 # IconFont  "8x13bold"
 
 # Font for the iconmanager
@@ -302,43 +302,43 @@ ResizeFont "9x15bold"
 Color
 {
   # Foreground and background colours for text on title bars
-  TitleForeground "black"
-  TitleBackground "gold"
+  TitleForeground "white"
+  TitleBackground "grey40"
   # A more conventional option
   # TitleForeground "white"
-  # TitleBackground "corn blue"
+  # TitleBackground "bisque"
 
   # Colour of the border of active window
   # You can use different colours for different sorts of windows.
   # See the man file
   # Set border colour for current window (if NoHighlight is not on)
-  BorderColor "gold"
+  BorderColor "white"
   ## OR If you prefer something more fancy:
   #  BorderColor "gold"
 
   # Colour of border for non-current window
-  BorderTileBackground "red"
+  BorderTileBackground "bisque"
 
   # This is used only if NoHighlight is turned on. Used for stippling
   # BorderTileForeground "black"
 
   # Colours of iconified windows
-  IconForeground "dark green"
+  IconForeground "white"
   IconBackground "white"
     # some options
     # IconForeground "blue"
     # IconBackground "red"
-  IconBorderColor "gray"
+  IconBorderColor "black"
 
   IconManagerBackground "blue"
   IconManagerForeground "yellow"
 
   # Colours for "pop-up" menus
   MenuTitleForeground "white"
-  MenuTitleBackground "blue"
+  MenuTitleBackground "black"
 
-  MenuForeground "gray30"
-  MenuBackground "gold"
+  MenuForeground "black"
+  MenuBackground "white"
 }
 
 # ## In case you have a machine without colour try something like this:
@@ -354,7 +354,7 @@ Color
 #   IconBorderColor "gray"
 #
 #   MenuTitleForeground "black"
-#   MenuTitleBackground "gray"
+#   MenuTitleBackground "white"
 #
 #   MenuForeground "black"
 #   MenuBackground "white"
@@ -431,12 +431,12 @@ StartInMapState
 WorkSpaces
 {
  #Name        bg     fg      bg-root
-  "Page 1"  {"gray" "black" "brown"}
-  "Page 2"  {"gray" "black" "red"}
-  "Page 3"  {"gray" "black" "dark green"}
-  "Page 4"  {"gray" "black" "purple"}
-  "Page 5"  {"gray" "black" "gold"}
-  "Page 6"  {"gray" "black" "blue"}
+  "Page 1"  {"gray" "black" "grey40"}
+  "Page 2"  {"gray" "black" "grey15"}
+  "Page 3"  {"gray" "black" "grey40"}
+  "Page 4"  {"gray" "black" "grey15"}
+  "Page 5"  {"gray" "black" "grey40"}
+  "Page 6"  {"gray" "black" "grey15"}
 }
 
 # Add more of those if you wish. You may then need to adjust the "columns"
@@ -584,7 +584,7 @@ Function "iconify-or-move"
 #
 #       FUNCTION - a ctwm function or menu specification
 #           e.g. f.resize, f.move, f.menu etc.
- 
+
 ## Keybindings
 "period" = s | c   : all     : f.exec "dmenu_run"
 "space"  = m       : all     : f.exec "rofi -show drun filebrowser"
@@ -837,7 +837,7 @@ menu "PoplogMenu"
 menu "ToolMenu"
 {
   "PIN/UnPIN"               f.pin
-  "Tool Menu"       f.title
+  "pythonXadds"       f.title
   ""                f.separator
 ### Fix xlock on linux?
 #  "XLock"           !"xlock &"
@@ -851,11 +851,11 @@ menu "ToolMenu"
   "Xterm43 lines"         !"xterm -sb -sl 500 -j -geometry 80x43+0+0  -T BASE -n BASE &"
   ""                f.separator
   "Firefox"       ! "firefox &"
-  "lxterminal"          ! "lxterminal &"
-  "beaver"          ! "beaver &"
-  "nemo"          ! "nemo &"
+  "roxterm"          ! "roxterm &"
+  "kate"          ! "kate &"
+  "filebrowser"          ! "thunar &"
   "xeyes"         ! "xeyes &"
-  "retroarch"          ! "flatpak run org.libretro.RetroArch &"
+  "retroarch"          ! "RetroArch &"
   ""                f.separator
   "XVED"            !"xterm -e poplog xved &"
   "XVED 10x20"           !"xved -fn 10x20 &"
