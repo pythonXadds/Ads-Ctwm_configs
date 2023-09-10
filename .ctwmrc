@@ -1,5 +1,5 @@
 #===============#
-# ~./ctwmrc     # PythonXadds personalised in 2023
+# ~./ctwmrc     # user file
 #===============#
 # User-specified behaviours for the CTWM window manager.
 # Based on TWM `Tab Window Manager for the X Window System'
@@ -330,8 +330,8 @@ Color
     # IconBackground "red"
   IconBorderColor "black"
 
-  IconManagerBackground "blue"
-  IconManagerForeground "yellow"
+  IconManagerBackground "white"
+  IconManagerForeground "black"
 
   # Colours for "pop-up" menus
   MenuTitleForeground "white"
