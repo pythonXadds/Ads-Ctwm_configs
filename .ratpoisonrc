@@ -1,0 +1,53 @@
+
+nitrogen --restore
+
+
+
+
+# SETTINGS #
+#--------------------------------#
+#
+#Dialog box
+rudeness 13
+warp on
+set winname title
+set wingravity center
+set transgravity center
+set border 3
+set barborder 3
+set barpadding 1 1
+set padding 0 22 0 0
+set bargravity center
+set font "Roboto:size=16" 
+set bgcolor #1704f6
+set fgcolor #477d8f
+set fwcolor #477d8f
+set bwcolor #000000
+
+
+set fgcolor cyan
+set bgcolor black
+#set font "courier"
+#set font "fixed-10"
+set font "courier-18"
+set bargravity ne
+#set bargravity sw
+bind F1 exec dmenu_run
+bind F2 restart
+bind z exec roxterm
+
+ 
+# launches a temporal window manager
+bind F8 tmpwm   
+# finishes ratpoison
+bind F9 quit
+
+## needs (server-start) in .emacs file
+bind e exec emacs
+bind u exec alacritty
+
+
+bind C-N number
+msgwait 10
+
+#Wallpaper
