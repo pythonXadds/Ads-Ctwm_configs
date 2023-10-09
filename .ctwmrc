@@ -133,19 +133,19 @@ RightTitleButton   ":xlogo"    = f.delete
 
 ## Stop windows from moving off the screen when pushed past the end
 # Uncomment if you want this constraint
-# DontMoveOff
+ DontMoveOff
 
 ## Use full window image rather than outline when moving a window
 # If too slow on your terminal, then comment this out.
-OpaqueMove
+# OpaqueMove
 
 ## Use full window image rather than outline when resizing a window
-OpaqueResize
+# OpaqueResize
 
 ## Place new windows 'at random' rather than asking user to place them
 # If you comment this out each new window comes up as a "wire frame"
 # which you have to move with the mouse then click button 1
-RandomPlacement
+# RandomPlacement
 
 ## Make titlebars short rather than full window width
 # SqueezeTitle
@@ -184,16 +184,16 @@ RestartPreviousState
 # If too small, it is hard to select a border. If too large, the borders
 # take up too much space. This default sems acceptable
 # It is overridden by 3D borders
-BorderWidth 2
+BorderWidth 4
 ## This value is used for 3d borders
-#ThreeDBorderWidth 2
+ThreeDBorderWidth 2
 
 ## you can stop some windows having borders, e.g.
 # NoBorder { win1 win2 win3  }
 
 ## Give borders a 3-D appearance. Comment this out if you prefer "flat"
 # borders. (If this is on the BorderWidth value is ignored.)
-#UseThreeDBorders
+UseThreeDBorders
 
 ## Allow individual clients to set border width if they want to
 # If you uncomment this, the initial borderwidth specified when
@@ -206,10 +206,10 @@ BorderWidth 2
 UseThreeDMenus
 
 # Give title-bars a 3-d appearance
-#UseThreeDTitles
+UseThreeDTitles
 
 # Change depth in title bar to show which window is in focus
-#SunkFocusWindowTitle
+# SunkFocusWindowTitle
 
 ##Use  resizing  cursors  when  the  pointer  is  on  the window border
 
@@ -229,7 +229,7 @@ BorderResizeCursors
 TitleFont "-*-ariel-r-*-14-*"
 # Other possibilities
 # TitleFont "-*-helvetica-bold-r-*-14-*"
-# TitleFont "-*-helvetica-bold-r-*-17-*"
+ TitleFont "-*-helvetica-bold-r-*-17-*"
 # TitleFont "-*-helvetica-bold-r-*-18-*"
 # TitleFont "-*-helvetica-bold-r-*-20-*"
 # TitleFont "8x15"
